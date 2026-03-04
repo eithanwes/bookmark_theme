@@ -40,7 +40,7 @@ Get-ChildItem -Path $Root -Force | Where-Object {
     Copy-Item -Path $_.FullName -Destination $Staging -Recurse -Force
 }
 
-Compress-Archive -Path (Join-Path $TempRoot "$PluginName\*") -DestinationPath $ZipPath -Force
+Compress-Archive -Path $Staging -DestinationPath $ZipPath -Force
 Remove-Item $TempRoot -Recurse -Force
 
 Write-Host "Created package: $ZipPath"
