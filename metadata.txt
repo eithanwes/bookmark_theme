@@ -10,3 +10,5 @@ category=Plugins
 icon=
 experimental=False
 deprecated=False
+
+supportsQt6=True
